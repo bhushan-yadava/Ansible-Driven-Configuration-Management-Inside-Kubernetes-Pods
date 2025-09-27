@@ -1,0 +1,15 @@
+- name: Configure Nginx inside pods
+  hosts: local
+  become: true
+  tasks:
+    - name: Ensure Nginx is installed
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Ensure Nginx is running
+      service:
+        name: nginx
+        state: started
+        enabled: yes

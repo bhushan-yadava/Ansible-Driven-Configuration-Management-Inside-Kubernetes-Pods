@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ansible-pod
+spec:
+  containers:
+    - name: ansible
+      image: <your-dockerhub>/ansible-pod:latest
+      volumeMounts:
+        - name: playbooks
+          mountPath: /ansible
+  volumes:
+    - name: playbooks
+      configMap:
+        name: ansible-playbooks

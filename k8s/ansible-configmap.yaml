@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ansible-playbooks
+data:
+  playbook.yml: |
+    - name: Configure Nginx inside pods
+      hosts: local
+      become: true
+      tasks:
+        - name: Ensure Nginx is installed
+          apt:
+            name: nginx
+            state: present
+            update_cache: yes
+        - name: Ensure Nginx is running
+          service:
+            name: nginx
+            state: started
+            enabled: yes
+  hosts: |
+    [local]
+    localhost ansible_connection=local
+  ansible.cfg: |
+    [defaults]
+    inventory = hosts
+    host_key_checking = False
+    retry_files_enabled = False
