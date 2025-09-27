@@ -15,6 +15,7 @@ Demonstrate Infrastructure as Code (IaC) practices inside a Kubernetes environme
 
 Showcase real-world DevOps skills: containerization, automation, and orchestration.
 
+---
 📂 Repository Structure
 ansible-in-kubernetes/
 │── Dockerfile                  # Custom Ansible image
@@ -30,7 +31,7 @@ ansible-in-kubernetes/
 │   └── settings.json           # Project settings
 │── README.md                   # Documentation
 
-
+---
 
 🛠️ Prerequisites
 
