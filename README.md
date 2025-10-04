@@ -5,6 +5,7 @@ This project demonstrates how to run Ansible inside Kubernetes Pods to configure
 
 Unlike traditional Ansible setups that run from external servers, here we containerize Ansible and deploy it directly into Kubernetes, making automation cluster-native.
 
+
 🎯 Objectives
 
 Install Ansible manually inside Kubernetes Pods.
@@ -14,6 +15,7 @@ Use Ansible playbooks and inventory to configure applications running in other p
 Demonstrate Infrastructure as Code (IaC) practices inside a Kubernetes environment.
 
 Showcase real-world DevOps skills: containerization, automation, and orchestration.
+
 
 ---
 📂 Repository Structure
@@ -32,6 +34,7 @@ ansible-in-kubernetes/
 │── README.md                   # Documentation
 
 ---
+
 
 🛠️ Prerequisites
 
